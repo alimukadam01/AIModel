@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AIModel-About</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+<body>
+
+<!--- Image Slider -->
+<div id="slides" class ="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="{% static 'AIModel/landmark4.jpg' %}" height="600" width="100%">
+			<div class="carousel-caption">
+				<h1 class="display-2">Residential Recommendation System</h1>
+				<h3>Find Your Home With Us </h3>
+				<a href="{% url 'AIModel-Info Form' %}">
+				<button type="button"  class="btn btn-outline-light btn-lg">Get Started</button>
+				</a>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img  src="{% static 'AIModel/landmark3.jpg' %}" height="600" width="100%">
+				<div class="carousel-caption">
+				<h1 class="display-1">About</h1>
+				<p class="lead fs-3 fw-bold">Every year there is a lot of populace influx in Karachi, in which various groups are included which comprise of
+					students, job workers, businessmen etc. These people are subject to various problems on a daily basis amongst
+					which a major problem is the choice of the correct area to live in as Karachi is an array of mentalities and
+					cultures divided into different areas. Hence, it is crucial to opt for the optimal place to reside in accordance
+					with their mindset while in the city. Our model will help you out in choosing the best place to live in while you're in Karachi.
+				</p>
+				</div>
+		</div>
+		<div class="carousel-item">
+			<img src="{% static 'AIModel/landmark2.jpg' %}" height="600" width="100%">
+		</div>
+	</div>
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 mx-auto" style="width: 800px;">
+			<h4 class="text-center fs-1">We the members of AI Club NEDUET have found the solution to your problem.<br>
+				Our AI model predicts the most suitable area of Karachi according to your preferences.</h4>
+		</div>
+	</div>
+</div>
+
+<!--- Welcome Section -->
+<div class="container-fluid-padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4">Find with ease</h1>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead fs-3">Welcome to our AI model. This is a platform where you can find a place which is most suitable
+				for you. So Get Started and answer a few questions to find your next home!</p>
+		</div>
+	</div>
+</div>
+<br><br>
+
+<!--- Three Column Section -->
+
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<h3>Historical Places</h3>
+		<p>The historical places of Karachi have their own worth to see</p>
+		<img src="{% static 'AIModel/kh1.jpg' %}" height="200" width="250">
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<h3>Beaches</h3>
+		<p>The sunset and sunrise view have their own charm</p>
+		<img src="{% static 'AIModel/ks1.jpg' %}" height="200" width="250">
+	</div>
+	<div class="col-xs-12 col-md-4">
+		<h3>Quaid's Tomb</h3>
+		<p>The Founder of the Nation Quaid-e-Azam is burried there.</p>
+		<img src="{% static 'AIModel/landmark1.jpg' %}" height="200" width="250">
+	</div>
+	</div>
+</div>
+<hr class="my-4">
+
+<div class="text-center col-md-6 mx-auto" style="width: 800px;">
+    <h1 class="display-3 text-dark">
+        A bit about Karachi.
+    </h1>
+
+    <h3 class="fs-1 text-justify">
+        Karachi has been an important city for over 100 years. Being a central hub for most economic and political
+		activity of the country, it has been a host to many. Karachi is the most populous city of Pakistan, a home to
+		many different communities and cultures. Also known as the City of Lights, the developing mega-city has attracted
+		people from all over the world in search of jobs, better education, business meetings and many other facilities
+		that the city has to offer. Low cost treatments from the multiple Public Hospitals in Karachi are received by
+		patients across the country. It also offers an exposure to a mixed variety of cultures and traditions, people
+		from all gentries and languages leaving you memories that are one to carry.<br>
+		The gentle sea breeze makes evenings in Karachi extra pleasant, made more exciting by the hustle and bustle around
+		the city which continues well after sundown. ATMs, Pharmacies, food deliveries and most hotels are open 24 hours.
+		Markets are open till midnight while several food streets, restaurants, cafes, and eateries serve customers even
+		in the wee hours. The city is in a state of constant stir at all times of the day which brings out your high
+		spirits, making stays all the more memorable!<br>
+    </h3>
+	<h5 class="text-right text-secondary">~Sana Mashhood</h5>
+</div>
+<!--- Two Column Section -->
+
+
+
+<!--- Footer -->
+<footer>
+	<div class="col-12 text-center">
+		<hr class="light">
+		<h5>&copy;Residential Recommendation System</h5>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- View in Browser: Drew's #1 Trending YouTube Tutorial -->
+<!-- End View in Browser: Drew's #1 Trending YouTube Tutorial -->
+
+

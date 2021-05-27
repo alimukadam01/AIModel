@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIModel-Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link  rel="stylesheet" href="{% static 'AIModel/style.css' %}" type="text/css">
+</head>
+<body>
+<center>
+<div>
+  <div class="heading"><h1> Residential Recommendation System</h1></div><br>
+</div>
+<div class="mane">
+  <form method="POST" action="{% url 'AIModel-Results' %}">
+
+    {% csrf_token %}
+
+    <div id="q1">
+      <h4 class="text-light">What would the 3 "must have places" around your house be?</h4><br>
+       <select class="option form-select w-50" name ="a">
+         <option value ="Parks,Restaraunts,Grocery Stores">Parks,Restaurants,Grocery Stores</option>
+         <option value ="Grocery Stores,Mosques,Recreational Clubs">Grocery Stores,Mosques,Recreational Clubs</option>
+         <option value ="Parks,Restaraunts,Grocery Stores">Parks,Restaurants,Grocery Stores</option>
+         <option value ="Parks,Grocery Stores,Recreational Clubs">Parks,Grocery Stores,Recreational Clubs</option>
+         <option value ="Parks,Mosques,Recreational Clubs">Parks,Mosques,Recreational Clubs</option>
+         <option value ="Restaraunts,Grocery Stores,Recreational Clubs">Restaurants,Grocery Stores,Recreational Clubs</option>
+         <option value ="Parks,Grocery Stores,Mosques">Parks,Grocery Stores,Mosques</option>
+         <option value ="Restaraunts,Grocery Stores,Mosques">Restaurants,Grocery Stores,Mosques</option>
+         <option value ="Parks,Restaraunts,Recreational Clubs">Parks,Restaurants,Recreational Clubs</option>
+       </select>
+    </div><br>
+
+    <div id="q2">
+      <h4 class="text-light">What type of an area would you be comfortable living in?</h4><br>
+      <select class="form-select w-25" name ="b">
+        <option value ="Social, Quiet, Private">Social, Quiet, Private</option>
+        <option value ="Social, Noisy, Public">Social, Noisy, Public</option>
+        <option value ="Anti-social, Quiet , Private">Anti-social, Quiet , Private</option>
+      </select>
+    </div><br>
+
+    <div id="q3">
+      <h4 class="text-light">On a scale of 1-5, one being the least, how clean should the area you live in be?</h4><br>
+      <select class="form-select w-25" name="c">Select any option
+        <option value="1">1
+        </option>
+        <option value="2">2
+        </option>
+        <option value="3">3
+        </option>
+        <option value="4">4
+        </option>
+        <option value="5">5
+        </option>
+      </select>
+    </div><br>
+
+    <div id="q4">
+      <h4 class="text-light">Do you consider yourself an introvert, extrovert or ambivert?</h4><br>
+      <select class="form-select w-25" name ="d">
+        <option value ="Introvert">Introvert</option>
+        <option value ="Extrovert">Extrovert</option>
+        <option value ="Ambivert">Ambivert</option>
+      </select>
+    </div><br>
+
+    <div id="q5" class="mentalpeace">
+      <h4 class="text-light">Do you value mental peace above other important factors<br>
+        (Money, Education, Family etc) in your life?</h4><br>
+      <select class="form-select w-25" name ="e">
+        <option value ="Yes">Yes</option>
+        <option value ="No">No</option>
+      </select>
+    </div><br>
+
+    <div id="q6">
+      <h4 class="text-light">What would you do if you don't get what you deserve?</h4><br>
+      <select class = "form-select w-50" name ="f">
+        <option value ="Pursue something else">Pursue something else</option>
+        <option value ="Fight for it">Fight for it</option>
+      </select>
+    </div><br>
+
+    <div id="q7">
+      <h4 class="text-light">What activities do you prefer in your free time?</h4><br>
+      <select class="form-select w-50" name ="g">
+        <option value ="Socialize">Socialize</option>
+        <option value ="Kill time">Kill time</option>
+        <option value ="Pursue hobbies (Sports, Reading, Painting etc)">Pursue hobbies (Sports, Reading, Painting etc)</option>
+        <option value ="Study">Study</option>
+      </select>
+    </div><br>
+
+    <div id="q8">
+      <h4 class="text-light">How often do you go for dine-outs?</h4><br>
+      <select class="form-select w-50 text-center" name ="h">
+        <option value ="Once or twice a week">Once or twice a week</option>
+        <option value ="Once or twice a month">Once or twice a month</option>
+        <option value ="Rarely">Rarely</option>
+        <option value ="Multiple times a week">Multiple times a week</option>
+      </select>
+    </div><br>
+
+    <div id="q9">
+      <h4 class="text-light">Consider the scenario, You make a new friend and you guys really vibe along <br>
+        but your friend is from another sect of the religion and your views on <br>
+        a sensitive topic contradict. What would you do?</h4><br>
+      <select class="form-select w-50" name ="i">
+        <option value ="Talk about the topic respecting eachother's views">Talk about the topic respecting eachother's views</option>
+        <option value ="Never talk about that topic">Never talk about that topic</option>
+        <option value ="Try to change the other person's view">Try to change the other person's view</option>
+      </select>
+    </div><br>
+
+    <div id="q10">
+      <h4 class="text-light">Out of these places, which one is your "go to" place for a dine-out?</h4><br>
+      <select class="form-select w-25" name ="j">
+        <option value ="Desi">Desi</option>
+        <option value ="KFC">KFC</option>
+        <option value ="Dominos">Dominos</option>
+        <option value ="Aylanto">Aylanto</option>
+        <option value ="Ginsoy">Ginsoy</option>
+      </select><br><br>
+    </div>
+            <center><input class="btn btn-outline-light btn-lg" type="submit"  value='Predict'></center><br><br>
+    </form>
+</div>
+</center>
+</body>
+</html>

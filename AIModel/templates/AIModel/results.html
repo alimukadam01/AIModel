@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+    h1{
+        font-size: 45px;
+        font-weight: 500;
+        margin-top: 10px;
+        font-family:fantasy;}
+    h3{
+      margin-top: 10px;
+      font-size: 20px;
+
+    }
+    .size{
+      margin-top: 12px;
+    width: 100%;
+    height: 100%;
+  }
+    .btn{
+    background-color: rgb(0,0,0,0.6);
+    display: block;
+    margin: 12px 0px 0px 12px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #366473;
+    padding: 14px 80px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.25px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 20px;}
+    #size{
+      width: 100%;
+      height: auto;
+      max-width: 660px;
+    }
+ @media (max-width: 668px) {
+    .size{
+    width: 400px;
+    height:400px;
+  }
+ }
+
+
+</style>
+</head>
+
+
+
+<body>
+<center>
+    <h1 class="text-primary">You are most suited for</h1>
+<div class="jumbotron">
+    {% if data == 34 %}
+        <h1>North Nazimabad</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/North+Nazimabad+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.940
+        6716,67.0243057,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb33f8014fe5943:0x11df7a65effb1ef6!8m2!3d24.9372146!4d67.042281">
+            <img class="size" src="{% static 'AIModel\North karachi.jpg' %}">
+        </a>
+
+
+    {% elif data == 16 %}
+        <h1>Gulshan e Iqbal</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+            <a href="https://www.google.com/maps/place/Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.92108
+            97,67.0563859,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb338b808bfd6b1:0x997b1a02c2570822!8m2!3d24.9180271!4d67.0970916">
+                <img class="size" src="{% static 'AIModel\gulshan.jpg' %}">
+            </a>
+
+
+    {% elif data == 28 %}
+        <h1>Malir Cantt</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Malir+Cantonment,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9462804,
+        67.1858043,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb337ece9d6a8a3:0xcaa17fe43aeae776!8m2!3d24.9596097!4d67.2251998">
+            <img class="size" src="{% static 'AIModel\Malir.jpg' %}">
+        </a>
+
+
+    {% elif data == 14 %}
+        <h1>North Karachi</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/North+Karachi+Twp,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.974587,67.0504788,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb340e59b6b225b:
+        0x1951829acb486c7e!8m2!3d24.9728707!4d67.0643315">
+            <img class="size" src="{% static 'AIModel\North karachi.jpg' %}">
+        </a>
+
+
+    {% elif data == 33 %}
+        <h1>Gulistan e Jauhar</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Gulistan-e-Johar,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9199645,67.1191429,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb338fa00456acf:0x7a277bdfeb6b99aa!8m2!3d24.9204194!4d67.1343848">
+            <img class="size" src="{% static 'AIModel\jauhar.jpg' %}">
+        </a>
+
+
+    {% elif data == 15 %}
+        <h1>Gulshan</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9210897,67.0563859,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb338b808bfd6b1:0x997b1a02c2570822!8m2!3d24.9180271!4d67.0970916">
+            <img class="size" src="{% static 'AIModel\gulshan.jpg' %}">
+        </a>
+
+
+    {% elif data == 4 %}
+        <h1>Bufferzone</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Buffer+Zone,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9554704,67.0589736,15z/data=!3m1!4b1!4m5!3m4!1s0x3eb340979a089751:0xb5046520e6b41807!8m2!3d24.9570898!4d67.0678065">
+            <img class="size" src="{% static 'AIModel\Bufferzone.jpg' %}">
+        </a>
+
+
+    {% elif data == 8 %}
+        <h1>Federal B Area</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Federal+B+Area+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9344795,67.0301764,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb33f68689fe4f9:0xcf5ef741e646eeff!8m2!3d24.9274729!4d67.0641265">
+            <img class="size" src="{% static 'AIModel\Federal B.jpg' %}">
+        </a>
+
+
+    {% elif data == 39 %}
+        <h1>Shah Faisal Colony</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Shah+Faisal+Colony,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8728803,67.1446319,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb3399d42aef5f1:0xa5813c4e620196a7!8m2!3d24.8773062!4d67.1591053">
+            <img class="size" src="{% static 'AIModel\Shah faisal.jpg' %}">
+        </a>
+
+
+    {% elif data == 42 %}
+        <h1>Saddar</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Saddar+Town,+Karachi,+Sindh,+Pakistan/@24.844128,66.9801729,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb33e70a31f45a9:0x25e252450977ec12!8m2!3d24.8531846!4d67.0166725">
+            <img class="size" src="{% static 'AIModel\Sadar.jpg' %}">
+        </a>
+
+    {% elif data == 24 %}
+        <h1>Clifton</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Clifton,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8183034,67.0021529,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb33dbbdc1875bf:0x6a6572ab3a66fed8!8m2!3d24.8269877!4d67.025096">
+            <img class="size" src="{% static 'AIModel\Clifton.jpg' %}">
+        </a>
+
+
+    {% elif data == 5 %}
+        <h1>Korangi</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Korangi,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.8352166,67.0978736,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb33b07c73d0a7f:0xecc47fa378e95fd5!8m2!3d24.8387414!4d67.1209226">
+            <img class="size" src="{% static 'AIModel\korangi.jpg' %}">
+        </a>
+
+
+    {% elif data == 19 %}
+        <h1>Gulzar e Hijri</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Gulzar-e-Hijri+Gulshan-e-Iqbal,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9567876,67.1088119,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb34760beb2d8a1:0x554a7a62506ad696!8m2!3d24.9557163!4d67.1349591">
+            <img class="size" src="{% static 'AIModel\Gulzar-e-hijri.jpg' %}">
+        </a>
+
+
+    {% elif data == 32 %}
+        <h1>Nazimabad</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Nazimabad,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9152485,67.0238563,15z/data=!3m1!4b1!4m5!3m4!1s0x3eb33fbd469d9bcd:0x749325c6e39952f3!8m2!3d24.910688!4d67.0310973">
+            <img class="size" src="{% static 'AIModel\Nazimabad.jpg' %}">
+        </a>
+
+
+    {% elif data == 31 %}
+        <h1>New Karachi</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/New+Karachi+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9914649,67.0467344,14z/data=!3m1!4b1!4m5!3m4!1s0x3eb3411d1b1aa5dd:0x7f8008a575c0b797!8m2!3d24.999885!4d67.0648263">
+            <img class="size" src="{% static 'AIModel\New Karachi.jpg' %}">
+        </a>
+
+
+    {% elif data == 35 %}
+        <h1>Surjani Town</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Surjani+Town,+Karachi,+Karachi+City,+Sindh,+Pakistan/@25.0444896,67.0362301,13z/data=!3m1!4b1!4m5!3m4!1s0x3eb343c1727792b3:0x774c5ea8a254dbbf!8m2!3d25.040071!4d67.0623962">
+            <img class="size" src="{% static 'AIModel\Surjani Town.jpg' %}">
+        </a>
+
+
+    {% elif data == 36 %}
+        <h1>Shadman</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/search/shadman/@24.8351473,66.9928063,11z/data=!3m1!4b1">
+            <img class="size" src="{% static 'AIModel\Shadman.jpg' %}">
+        </a>
+
+
+    {% else %}
+        <h1>Nazimabad</h1>
+        <h3 class="text-muted">Click the image to checkout map location</h3>
+        <a href="https://www.google.com/maps/place/Nazimabad,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.9152485,67.0238563,15z/data=!3m1!4b1!4m5!3m4!1s0x3eb33fbd469d9bcd:0x749325c6e39952f3!8m2!3d24.910688!4d67.0310973">
+            <img class="size" src="{% static 'AIModel\Nazimabad.jpg' %}">
+        </a>
+
+    {% endif %}
+</div>
+    <br><br>
+    <h5 class="text-muted">Not satisfied with the result? </h5>
+    <a href="{% url 'AIModel-Info Form' %}">Try Again!</a>
+    <br><br>
+    <a href="{% url 'blog-home' %}">Back to the blog</a>
+</center>
+</body>
+</html>
